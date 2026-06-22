@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <p>
+        Please complete the information below to apply for the position.
+        All fields are required.
+    </p>
+
+    <!-- Form submits data to the JSP page -->
+    <form action="displayApplication.jsp" method="post">
+
+        <!-- Applicant Name -->
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required>
+        <br><br>
+
+        <!-- Email Address -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <!-- Years of Experience -->
+        <label for="experience">Years of Experience:</label><br>
+        <input type="number" id="experience" name="experience" min="0" required>
+        <br><br>
+
+        <!-- Desired Position -->
+        <label for="position">Desired Position:</label><br>
+        <select id="position" name="position">
+            <option value="Software Developer">Software Developer</option>
+            <option value="Web Designer">Web Designer</option>
+            <option value="Database Administrator">Database Administrator</option>
+            <option value="Technical Support">Technical Support</option>
+        </select>
+        <br><br>
+
+        <!-- Employment Type -->
+        <label>Employment Type:</label><br>
+
+        <input type="radio"
+               id="fulltime"
+               name="employmentType"
+               value="Full-Time">
+
+        <label for="fulltime">Full-Time</label>
+
+        <input type="radio"
+               id="parttime"
+               name="employmentType"
+               value="Part-Time">
+
+        <label for="parttime">Part-Time</label>
+
+        <br><br>
+
+        <!-- Additional Skills -->
+        <label for="skills">Additional Skills:</label><br>
+
+        <textarea id="skills"
+                  name="skills"
+                  rows="4"
+                  cols="40"></textarea>
+
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+
+    </form>
+
+</body>
+</html>
